@@ -375,6 +375,169 @@
 
   <hr class="section-divider">
 
+  <!-- WHY JURIS WINS — ECONOMICS + PRIVACY -->
+  <div class="section">
+    <div class="section-label">Why JURIS Wins</div>
+    <h2>Pennies on the Dollar. Sovereignty Forever.</h2>
+
+    <p>Two reasons a JURIS-type engine outperforms every commercial legal research subscription on the market: <strong>it costs almost nothing to run</strong>, and <strong>nobody else has access to your library or your strategy</strong>. The math is verifiable; the privacy is architectural.</p>
+
+    <h3>1. The Token Economics — Why It's So Cheap</h3>
+
+    <p>Every JURIS query is paid for in <strong>tokens</strong> — Anthropic's billing unit. A token is roughly 3–4 characters of text. Anthropic charges per million tokens, with different rates for what you send <em>in</em> versus what Claude sends <em>out</em>.</p>
+
+    <div class="table-wrapper" style="margin: 1.5rem 0;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.93rem;">
+        <thead>
+          <tr style="background: var(--accent-mid); color: var(--paper);">
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">Claude Model</th>
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">Input ($/million tokens)</th>
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">Output ($/million tokens)</th>
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">JURIS use case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;"><strong>Haiku 4.5</strong></td>
+            <td style="padding: 0.6rem 0.9rem;">$1</td>
+            <td style="padding: 0.6rem 0.9rem;">$5</td>
+            <td style="padding: 0.6rem 0.9rem;">Quick lookups, exploratory queries</td>
+          </tr>
+          <tr style="background: var(--paper-alt); border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;"><strong>Sonnet 4.6 ★</strong></td>
+            <td style="padding: 0.6rem 0.9rem;"><strong>$3</strong></td>
+            <td style="padding: 0.6rem 0.9rem;"><strong>$15</strong></td>
+            <td style="padding: 0.6rem 0.9rem;"><strong>JURIS default — best balance for serious legal research</strong></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;"><strong>Opus 4.6</strong></td>
+            <td style="padding: 0.6rem 0.9rem;">$5</td>
+            <td style="padding: 0.6rem 0.9rem;">$25</td>
+            <td style="padding: 0.6rem 0.9rem;">Final pre-filing brief review when only the best will do</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.4rem; font-style: italic;">Pricing verified at <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank">platform.claude.com/docs/about-claude/pricing</a> — May 2026.</div>
+    </div>
+
+    <h3>What a Real JURIS Session Actually Costs</h3>
+
+    <p>A typical JURIS query consumes about <strong>2,500–5,000 tokens combined</strong> (input + output):</p>
+
+    <ul style="list-style: none; padding-left: 0; margin: 1rem 0;">
+      <li style="margin: 0.4rem 0; padding-left: 1rem; border-left: 2px solid var(--gold); font-size: 0.94rem;"><strong>System prompt:</strong> 800–1,200 tokens (your engine's brain — sent on every query)</li>
+      <li style="margin: 0.4rem 0; padding-left: 1rem; border-left: 2px solid var(--gold); font-size: 0.94rem;"><strong>Retrieved library chunks:</strong> 1,000–2,000 tokens (the 8 closest matches from YOUR vector store)</li>
+      <li style="margin: 0.4rem 0; padding-left: 1rem; border-left: 2px solid var(--gold); font-size: 0.94rem;"><strong>Your question:</strong> ~20 tokens</li>
+      <li style="margin: 0.4rem 0; padding-left: 1rem; border-left: 2px solid var(--gold); font-size: 0.94rem;"><strong>Generated answer:</strong> 300–800 tokens of legal analysis with citations</li>
+    </ul>
+
+    <p>Running the math at Sonnet 4.6 rates:</p>
+
+    <div style="background: var(--code-bg); border: 1px solid var(--border); padding: 1rem 1.2rem; margin: 1rem 0; font-family: 'Courier Prime', monospace; font-size: 0.85rem; line-height: 1.7; color: var(--ink); white-space: pre; overflow-x: auto;">    Per query  ≈  3,500 input tokens × $3/M    =  $0.0105
+                   500 output tokens × $15/M  =  $0.0075
+                   ─────────────────────────────────────
+                   TOTAL PER QUERY            ≈  $0.018   (about 2 cents)
+
+    Per session (20–50 queries)     ≈  $0.36 – $0.90
+    Per month (heavy research, ~1k queries) ≈  $18
+
+    Even at 1,500 queries/month — heavy daily use — total ≈ $27</div>
+
+    <div class="callout success" style="background: #f0f7f0; border-left-color: var(--success); padding: 1rem 1.3rem; margin: 1.5rem 0; font-size: 0.97rem;">
+      <span class="callout-label" style="color: var(--success); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 0.4rem;">The Honest Bottom Line</span>
+      For Chaos Tribe-level usage — active legal research, brief drafting, intelligence updates — your Anthropic API bill will sit between <strong>$5 and $25 per month</strong>. Compare that to <strong>Westlaw at $150–$300/month minimum</strong> for solo practitioners, on top of which Westlaw does not know your case, your jurisdiction, your strategy, or your specific filings. The math is not close.
+    </div>
+
+    <h3>Cost Optimizers Built In</h3>
+
+    <ul style="list-style: none; padding-left: 0; margin: 1rem 0; font-size: 0.95rem;">
+      <li style="margin: 0.6rem 0; padding-left: 1.5rem; position: relative;">
+        <strong style="color: var(--accent);">Prompt caching — up to 90% off</strong> &nbsp;Your system prompt (the biggest consistent cost) can be cached by Anthropic so it's only re-processed at 10% of normal rate after the first query.
+      </li>
+      <li style="margin: 0.6rem 0; padding-left: 1.5rem; position: relative;">
+        <strong style="color: var(--accent);">Batch API — 50% off</strong> &nbsp;Non-urgent bulk work (library audits, summarizing many cases) runs at half the regular rate with 24-hour turnaround.
+      </li>
+      <li style="margin: 0.6rem 0; padding-left: 1.5rem; position: relative;">
+        <strong style="color: var(--accent);">Spending cap — hard ceiling at $25/month</strong> &nbsp;Step 01 of the kit instructs you to set a monthly hard cap. Runaway query? It just stops. No surprise bills.
+      </li>
+      <li style="margin: 0.6rem 0; padding-left: 1.5rem; position: relative;">
+        <strong style="color: var(--accent);">Local-model escape hatch — $0/month</strong> &nbsp;Switch your JURIS workspace from Claude API to Ollama running locally and your cost drops to literal zero. Slower, less capable, but completely free and fully offline.
+      </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h3>2. The Privacy — Why Nobody Else Can See What You Built</h3>
+
+    <p>A JURIS engine is <strong>architecturally private</strong> by design — not "privacy because we promise," but privacy because the data physically never leaves your machine except for one tightly-scoped purpose. Here is exactly what lives where, and what crosses the boundary.</p>
+
+    <div class="table-wrapper" style="margin: 1.5rem 0;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem;">
+        <thead>
+          <tr style="background: var(--accent-mid); color: var(--paper);">
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">What</th>
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">Where it lives</th>
+            <th style="padding: 0.7rem 0.9rem; text-align: left;">Who can see it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;">Your full source documents (the PDFs)</td>
+            <td style="padding: 0.6rem 0.9rem;"><code>~/Documents/JURIS_LIBRARY/</code></td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--success);"><strong>Only you</strong></td>
+          </tr>
+          <tr style="background: var(--paper-alt); border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;">Vector embeddings (the searchable index)</td>
+            <td style="padding: 0.6rem 0.9rem;"><code>~/Library/Application Support/anythingllm-desktop/</code></td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--success);"><strong>Only you</strong> (LanceDB, fully local)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;">Your personalized system prompt</td>
+            <td style="padding: 0.6rem 0.9rem;">Inside the AnythingLLM workspace + your password manager</td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--gold);">You + Anthropic at query time (not stored, not used for training per API ToS)</td>
+          </tr>
+          <tr style="background: var(--paper-alt); border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;">Intelligence files (your strategy)</td>
+            <td style="padding: 0.6rem 0.9rem;"><code>~/Documents/[YOUR_ENGINE]_INTELLIGENCE/</code></td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--success);"><strong>Only you</strong></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;">AgentMemory state (decisions, sessions)</td>
+            <td style="padding: 0.6rem 0.9rem;"><code>~/data/state_store.db/</code> + <code>~/.agentmemory/</code></td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--success);"><strong>Only you</strong> (binary store, never syncs)</td>
+          </tr>
+          <tr style="background: var(--paper-alt); border-bottom: 1px solid var(--rule-light);">
+            <td style="padding: 0.6rem 0.9rem;">What gets sent to Anthropic per query</td>
+            <td style="padding: 0.6rem 0.9rem;">8 small library chunks + your question + system prompt</td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--gold);">Anthropic at query time only — not stored beyond billing logs, not used for training</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.6rem 0.9rem;">Embedding generation</td>
+            <td style="padding: 0.6rem 0.9rem;">100% local (Ollama or AnythingLLM Native)</td>
+            <td style="padding: 0.6rem 0.9rem; color: var(--success);"><strong>Only you</strong> — never leaves your Mac</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The Four Sovereignty Guarantees</h3>
+
+    <ol style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
+      <li style="margin: 0.7rem 0;"><strong>You control the library.</strong> Nobody can add to it, remove from it, audit it, or even know what's in it. Westlaw's database belongs to Thomson Reuters; your JURIS library belongs to you. You decide what your engine knows and doesn't know.</li>
+      <li style="margin: 0.7rem 0;"><strong>You control the doctrine.</strong> Your system prompt encodes the <em>exclusive equity framework</em> — the Kill Sequence, the Equity Blade, the Two Realms — that the Chaos Tribe programmed. Commercial legal research tools have no idea about this framework. Your JURIS reasons in it on every single query, automatically, because the prompt is the brain.</li>
+      <li style="margin: 0.7rem 0;"><strong>You control the data path.</strong> If you ever want to go 100% offline, swap Claude API for Ollama. Same kit, same workspace, same library — but now no bytes leave your Mac at all. The kit's Step 04 documents this Path 1 alternative.</li>
+      <li style="margin: 0.7rem 0;"><strong>You control the audit trail.</strong> Every JURIS query, every memory save, every session — all logged locally in AgentMemory's binary store with full provenance. The viewer at <code>http://localhost:3113</code> shows you everything your engine has ever known. Nobody else can see this log, ever.</li>
+    </ol>
+
+    <div class="callout warning" style="background: #fef7e8; border-left-color: var(--gold); padding: 1rem 1.3rem; margin: 1.5rem 0;">
+      <span class="callout-label" style="color: var(--gold); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 0.4rem;">The Critical Difference</span>
+      Commercial legal research is <em>search</em> over <em>their</em> database with <em>their</em> ranking. Your JURIS is <strong>retrieval-augmented reasoning over YOUR library with YOUR strategy</strong>. The framework is RAZOR's battle-tested production stack. The content is what you choose to load. The cost is pennies. The privacy is architectural. <strong>This is what sovereignty looks like in practice.</strong>
+    </div>
+
+  </div>
+
+  <hr class="section-divider">
+
   <!-- THE 10 STEPS -->
   <div class="section">
     <div class="section-label">The Path</div>
