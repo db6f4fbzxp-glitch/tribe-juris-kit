@@ -431,63 +431,84 @@
       </div>
 
       <!-- STEP 06 -->
-      <div class="step-card" style="opacity: 0.6;">
+      <div class="step-card">
         <div class="step-header">
           <div class="step-number">06</div>
           <div class="step-title">
-            <h3>MCP Bridges + Chrome arm <span style="color: var(--gold); font-size: 0.75rem;">[coming]</span></h3>
+            <h3>MCP Bridges + Chrome arm</h3>
             <div class="step-meta">15 minutes · Automated script + Chrome extension install</div>
           </div>
         </div>
         <div class="step-desc">Wire AgentMemory into Claude Desktop, Cowork, and Claude Code via their MCP config files — every AI tool shares memory with your engine. Plus install the <strong>Claude in Chrome</strong> extension so COWORK can drive your browser (JEDS, county recorders, government sites, GitHub).</div>
+        <div class="step-actions">
+          <a class="btn" href="06_mcp_bridges.sh" target="_blank">View script</a>
+          <button class="btn btn-secondary" onclick="copyCommand(this, 'curl -fsSL {{REPO_BASE_URL}}/06_mcp_bridges.sh | bash')">📋 Copy install command</button>
+        </div>
+        <div class="curl-box" onclick="copyText(this, 'curl -fsSL {{REPO_BASE_URL}}/06_mcp_bridges.sh | bash')">curl -fsSL {{REPO_BASE_URL}}/06_mcp_bridges.sh | bash</div>
       </div>
 
       <!-- STEP 07 -->
-      <div class="step-card" style="opacity: 0.6;">
+      <div class="step-card">
         <div class="step-header">
           <div class="step-number">07</div>
           <div class="step-title">
-            <h3>Personalized Launcher <span style="color: var(--gold); font-size: 0.75rem;">[coming]</span></h3>
-            <div class="step-meta">5 minutes · Script generator</div>
+            <h3>Personalized Launcher</h3>
+            <div class="step-meta">5 minutes · Interactive script generator</div>
           </div>
         </div>
-        <div class="step-desc">Generate your own <code>launch_[engine].sh</code> from the template, parameterized with your engine name. Becomes a macOS Login Item that boots your stack automatically every login.</div>
+        <div class="step-desc">Interactive generator — prompts for your engine name, reads the external drive path saved in Step 02, then writes <code>launch_[engine].sh</code> + <code>[Engine]Launcher.command</code> to <code>~/Documents/</code>. Add the .command file as a macOS Login Item — your stack boots automatically every login with binary-store backup rotation built in.</div>
+        <div class="step-actions">
+          <a class="btn" href="07_personalized_launcher.sh" target="_blank">View script</a>
+          <button class="btn btn-secondary" onclick="copyCommand(this, 'curl -fsSL {{REPO_BASE_URL}}/07_personalized_launcher.sh | bash')">📋 Copy install command</button>
+        </div>
+        <div class="curl-box" onclick="copyText(this, 'curl -fsSL {{REPO_BASE_URL}}/07_personalized_launcher.sh | bash')">curl -fsSL {{REPO_BASE_URL}}/07_personalized_launcher.sh | bash</div>
       </div>
 
       <!-- STEP 08 -->
-      <div class="step-card" style="opacity: 0.6;">
+      <div class="step-card">
         <div class="step-header">
           <div class="step-number">08</div>
           <div class="step-title">
-            <h3>Library Load (Six-Day Build) <span style="color: var(--gold); font-size: 0.75rem;">[coming]</span></h3>
+            <h3>Library Load (Six-Day Build)</h3>
             <div class="step-meta">6 days · 1–2 hours per day</div>
           </div>
         </div>
-        <div class="step-desc">Load your state constitution, court rules, FRCP, equity treatises (Gibson, Pomeroy, Van Zile, Story), Bouvier's 1928, and your own case files. The foundation of your sovereign library.</div>
+        <div class="step-desc">Day 1 jurisdictional foundation (state constitution + court rules + FRCP). Day 2 equity stack (Gibson + Pomeroy + Van Zile + Story). Day 3 Bouvier's 1928. Day 4 controlling case law. Day 5 academic scholarship (Levitin et al). Day 6 your own case files. Test queries after every day. By Day 6 your JURIS speaks your jurisdiction's voice.</div>
+        <div class="step-actions">
+          <a class="btn" href="08_library_load.md" target="_blank">View Six-Day Build guide</a>
+        </div>
       </div>
 
       <!-- STEP 09 -->
-      <div class="step-card" style="opacity: 0.6;">
+      <div class="step-card">
         <div class="step-header">
           <div class="step-number">09</div>
           <div class="step-title">
-            <h3>Intelligence File v1.0 <span style="color: var(--gold); font-size: 0.75rem;">[coming]</span></h3>
-            <div class="step-meta">30–60 minutes · Interactive with Cowork</div>
+            <h3>Intelligence File v1.0</h3>
+            <div class="step-meta">30–90 minutes · Interactive with Cowork</div>
           </div>
         </div>
-        <div class="step-desc">Extract your v1.0 intelligence file from your existing Claude conversation history. Eight mandatory sections. Lock it. Version it. Feed it to JURIS at every session start.</div>
+        <div class="step-desc">Export your existing Claude conversation history, paste the relevant parts into the capture prompt, and produce a structured v1.0 intelligence file with 8 mandatory sections (active cases, key arguments, authorities, library, citation rules, procedural status, open items, mission). Save it versioned. Feed it to JURIS at every session start.</div>
+        <div class="step-actions">
+          <a class="btn" href="09_intelligence_file_v1.md" target="_blank">View capture instructions</a>
+        </div>
       </div>
 
       <!-- STEP 10 -->
-      <div class="step-card" style="opacity: 0.6;">
+      <div class="step-card">
         <div class="step-header">
           <div class="step-number">10</div>
           <div class="step-title">
-            <h3>Persistence Hooks <span style="color: var(--gold); font-size: 0.75rem;">[coming]</span></h3>
+            <h3>Persistence Hooks <span style="color: var(--gold); font-size: 0.85rem;">★ Closes the Loop</span></h3>
             <div class="step-meta">5 minutes · Automated script</div>
           </div>
         </div>
-        <div class="step-desc">Install binary store backup rotation (5 most recent snapshots kept) + <code>~/.zlogout</code> snapshot hook so memories survive every reboot reliably. Closes the loop.</div>
+        <div class="step-desc">Final step. Binary store baseline backup + <code>~/.zlogout</code> auto-snapshot on every logout + manual <code>snap</code> alias for instant snapshots anytime. Closes the loop on the persistence gotcha discovered during Tiddy Mini M4 — memories saved late in a session now survive every reboot reliably.</div>
+        <div class="step-actions">
+          <a class="btn" href="10_persistence_hooks.sh" target="_blank">View script</a>
+          <button class="btn btn-secondary" onclick="copyCommand(this, 'curl -fsSL {{REPO_BASE_URL}}/10_persistence_hooks.sh | bash')">📋 Copy install command</button>
+        </div>
+        <div class="curl-box" onclick="copyText(this, 'curl -fsSL {{REPO_BASE_URL}}/10_persistence_hooks.sh | bash')">curl -fsSL {{REPO_BASE_URL}}/10_persistence_hooks.sh | bash</div>
       </div>
 
     </div>
