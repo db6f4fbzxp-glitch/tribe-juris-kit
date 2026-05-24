@@ -1,0 +1,46 @@
+# macOS noise
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets — NEVER commit
+.env
+.env.*
+*.key
+*sk-ant-*
+*sk-or-*
+*sk-proj-*
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build artifacts
+*.log
+*.tmp
+*.bak
+*.cache
+
+# Personal tribe member outputs that shouldn't be in the public template
+*_PERSONAL_*
+*_FILLED_*
+*_COMPLETED_*
+intelligence_v*.md
+intelligence_v*.txt
+
+# Deploy script (one-time use, kept local)
+_deploy*.sh
+deploy_to_github.sh
