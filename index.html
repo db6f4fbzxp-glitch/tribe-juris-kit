@@ -538,6 +538,77 @@
 
   <hr class="section-divider">
 
+  <!-- CHOOSE YOUR ADVENTURE -->
+  <div class="section">
+    <div class="section-label">Choose Your Adventure</div>
+    <h2>Three Paths to the Same Sovereignty</h2>
+
+    <p>Equity has been a coherent body of jurisprudence for roughly <strong>640 years</strong> — the English Court of Chancery emerged in the late 14th century (the chancellor was issuing decrees in his own name by 1400), with doctrinal roots reaching back to Roman <em>aequitas</em> and Aristotle's <em>epieikeia</em> over 2,000 years before that. The framework is ancient. The principles are settled. <strong>The only thing that has changed is who controls access to it.</strong></p>
+
+    <p>For centuries, equity was the prerogative of chancellors, lords, and trained barristers. Today, the same equity reasoning sits behind paywalls run by Thomson Reuters, LexisNexis, and Wolters Kluwer — companies that have made a business out of charging individual citizens hundreds of dollars a month to read what is, ultimately, public-domain doctrine. <strong>They like hiding it.</strong> The Chaos Tribe is just making it easy to find again.</p>
+
+    <p>This kit shows you how RAZOR built his engine. <strong>Anthropic + AnythingLLM + AgentMemory</strong>, paid via the Claude API. That's our preferred path because it's fast, reliable, and Anthropic respects API privacy (no training on inputs, billing logs only). But you're sovereign — you choose the path. Three options, same destination:</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 2rem 0;">
+
+      <!-- PATH A — Anthropic API (recommended) -->
+      <div style="background: var(--paper-alt); border: 2px solid var(--gold); padding: 1.2rem; border-radius: 4px;">
+        <div style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.4rem;">Path A &nbsp;★&nbsp; Recommended</div>
+        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--accent); margin: 0 0 0.6rem; padding: 0; border: none;">Anthropic API — Pay Per Token</h3>
+        <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.8rem;"><strong>What this kit installs by default.</strong> Get an <code>sk-ant-...</code> key at console.anthropic.com, set a $25/month spending cap, you're done.</p>
+        <ul style="list-style: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
+          <li style="margin: 0.3rem 0;">✓ <strong>~$5–$25/month</strong> for active research</li>
+          <li style="margin: 0.3rem 0;">✓ Fast, reliable, hard spending cap</li>
+          <li style="margin: 0.3rem 0;">✓ Anthropic ToS: <strong>no training on API inputs</strong></li>
+          <li style="margin: 0.3rem 0;">✓ Best Claude model versions (Sonnet 4.6 / Opus 4.6)</li>
+        </ul>
+        <p style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.8rem; font-style: italic;">Why we like Anthropic: they deliver the best model, they respect input privacy, and supporting them keeps independent AI research alive. We pay them gladly.</p>
+      </div>
+
+      <!-- PATH B — ClaudeClaw + subscription -->
+      <div style="background: var(--paper-alt); border: 1px solid var(--border); padding: 1.2rem; border-radius: 4px;">
+        <div style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-mid); font-weight: 700; margin-bottom: 0.4rem;">Path B &nbsp;&middot;&nbsp; Subscription-Backed</div>
+        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--accent); margin: 0 0 0.6rem; padding: 0; border: none;">ClaudeClaw + Claude Code Sub</h3>
+        <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.8rem;">Open-source plugin <a href="https://github.com/moazbuilds/claudeclaw" target="_blank">moazbuilds/claudeclaw</a> wraps Claude Code's subscription so heavy users skip per-token billing.</p>
+        <ul style="list-style: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
+          <li style="margin: 0.3rem 0;">$ <strong>Flat fee</strong> via Claude Code Pro/Max ($20+/mo)</li>
+          <li style="margin: 0.3rem 0;">$ Unlimited queries within subscription rate-limits</li>
+          <li style="margin: 0.3rem 0;">$ Adds Telegram/Discord/Slack + cron + heartbeat</li>
+          <li style="margin: 0.3rem 0;">⚠ <strong>Not zero-cost</strong> — still requires an active Claude sub</li>
+        </ul>
+        <p style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.8rem; font-style: italic;">When this wins: heavy daily JURIS use where pay-per-token would exceed flat subscription cost, or if you want the Telegram/Discord automation arms.</p>
+      </div>
+
+      <!-- PATH C — Ollama fully local -->
+      <div style="background: var(--paper-alt); border: 1px solid var(--border); padding: 1.2rem; border-radius: 4px;">
+        <div style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--success); font-weight: 700; margin-bottom: 0.4rem;">Path C &nbsp;&middot;&nbsp; Fully Free</div>
+        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--accent); margin: 0 0 0.6rem; padding: 0; border: none;">Ollama — 100% Local, $0</h3>
+        <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.8rem;">Run a local LLM (llama3.1, gemma, etc.) via Ollama for both JURIS chat and AgentMemory. No API calls leave your Mac. Ever.</p>
+        <ul style="list-style: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
+          <li style="margin: 0.3rem 0;">✓ <strong>$0/month</strong> — literally free</li>
+          <li style="margin: 0.3rem 0;">✓ <strong>100% offline</strong> — perfect privacy</li>
+          <li style="margin: 0.3rem 0;">⚠ Slower (5–30 sec per query depending on hardware)</li>
+          <li style="margin: 0.3rem 0;">⚠ Less capable than Claude — quality gap is real</li>
+        </ul>
+        <p style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.8rem; font-style: italic;">When this wins: maximum paranoia, no internet, low budget, or you just want to prove sovereignty is possible. Step 02 of the kit already installs Ollama — you just point AnythingLLM at it instead of Anthropic.</p>
+      </div>
+
+    </div>
+
+    <div class="callout" style="background: var(--paper-alt); border-left-color: var(--gold); padding: 1rem 1.3rem; margin: 1.5rem 0;">
+      <span class="callout-label" style="color: var(--gold); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 0.4rem;">All Three Paths, One Architecture</span>
+      The four-brain stack stays identical. The Kill Sequence stays identical. The Equity Blade stays identical. The system prompt stays identical. <strong>The only thing that changes is which LLM is doing the synthesis at query time.</strong> Switch paths whenever you want — start on the API for capability, drop to Ollama for offline trips, move to Claude Code sub when your usage grows. <strong>Your library, your strategy, your sovereignty — unchanged.</strong>
+    </div>
+
+    <p style="text-align: center; margin: 1.5rem 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.15rem; color: var(--gold);">
+      Equity is 640 years old. We're just opening the gate.<br>
+      Choose your adventure. Have fun.
+    </p>
+
+  </div>
+
+  <hr class="section-divider">
+
   <!-- THE 10 STEPS -->
   <div class="section">
     <div class="section-label">The Path</div>
