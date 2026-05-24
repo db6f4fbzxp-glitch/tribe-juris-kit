@@ -140,6 +140,24 @@
   .banner { background: var(--gold); color: var(--paper); padding: 0.7rem 1rem; text-align: center; font-size: 0.85rem; letter-spacing: 0.04em; margin: -2rem -5rem 2rem; }
   .banner code { font-family: 'Courier Prime', monospace; background: rgba(255,255,255,0.15); padding: 0.1rem 0.4rem; }
 
+  /* OS TOGGLE — Mac / Windows */
+  .os-toggle-wrap { display: flex; justify-content: center; margin: 1.5rem 0 2rem; }
+  .os-toggle { display: inline-flex; background: var(--paper-alt); border: 1px solid var(--border); border-radius: 24px; padding: 4px; gap: 0; }
+  .os-toggle button { background: transparent; border: none; padding: 0.5rem 1.4rem; font-family: 'EB Garamond', Georgia, serif; font-size: 0.95rem; letter-spacing: 0.04em; cursor: pointer; color: var(--ink-muted); border-radius: 20px; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; }
+  .os-toggle button.active { background: var(--accent); color: var(--paper); font-weight: 600; box-shadow: 0 1px 4px rgba(26,39,68,0.25); }
+  .os-toggle button:not(.active):hover { color: var(--accent); }
+  .os-toggle .os-icon { font-size: 1rem; }
+
+  /* OS-conditional visibility */
+  body[data-os="mac"] .windows-only { display: none; }
+  body[data-os="windows"] .mac-only { display: none; }
+
+  /* Windows-mode banner */
+  .windows-banner { background: var(--accent); color: var(--paper); padding: 0.8rem 1.2rem; margin: 1rem 0 2rem; border-left: 4px solid var(--gold); font-size: 0.9rem; line-height: 1.6; }
+  .windows-banner strong { color: var(--gold); }
+  .windows-banner a { color: var(--paper); text-decoration: underline; }
+  .windows-banner a:hover { color: var(--gold); }
+
   /* FOOTER */
   .footer { margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--accent); text-align: center; font-size: 0.88rem; color: var(--ink-muted); line-height: 1.7; }
   .footer-lineage { font-style: italic; color: var(--gold); margin: 1rem 0; font-size: 0.95rem; letter-spacing: 0.04em; }
@@ -166,6 +184,20 @@
   <!-- BANNER FOR TRIBE MEMBER SETUP -->
   <div class="banner">
     <strong>📌 If you forked this repo:</strong> edit <code>{{REPO_BASE_URL}}</code> below to your raw GitHub URL (e.g. <code>https://raw.githubusercontent.com/your-username/tribe-juris-kit/main</code>)
+  </div>
+
+  <!-- OS TOGGLE — Mac / Windows -->
+  <div class="os-toggle-wrap">
+    <div class="os-toggle" role="tablist" aria-label="Operating system">
+      <button id="btn-mac" class="active" onclick="setOS('mac')" aria-selected="true"><span class="os-icon">🍎</span> macOS</button>
+      <button id="btn-windows" onclick="setOS('windows')" aria-selected="false"><span class="os-icon">⊞</span> Windows</button>
+    </div>
+  </div>
+
+  <!-- Windows-mode banner (only visible when Windows is selected) -->
+  <div class="windows-banner windows-only">
+    <strong>👋 Welcome, Windows users — we see you.</strong><br>
+    The kit is fully runnable on Windows with one small prerequisite: <strong>Git Bash</strong> (free, 5-min install from <a href="https://gitforwindows.org" target="_blank">gitforwindows.org</a>). Once that's installed, every <code>curl ... | bash</code> command works exactly like on Mac. The path translations, Task Scheduler equivalents for Login Items, and the few other differences are all documented in our <a href="WINDOWS_QUICKSTART.md" target="_blank">Windows Quickstart</a> — open that file alongside the steps below.
   </div>
 
   <!-- COVER -->
@@ -663,6 +695,33 @@
         document.body.innerHTML = document.body.innerHTML.replaceAll('{{REPO_BASE_URL}}', rawUrl);
         const banner = document.querySelector('.banner');
         if (banner) banner.style.display = 'none';
+      }
+    }
+  })();
+
+  // OS TOGGLE — Mac / Windows
+  function setOS(os) {
+    document.body.setAttribute('data-os', os);
+    document.getElementById('btn-mac').classList.toggle('active', os === 'mac');
+    document.getElementById('btn-windows').classList.toggle('active', os === 'windows');
+    document.getElementById('btn-mac').setAttribute('aria-selected', os === 'mac' ? 'true' : 'false');
+    document.getElementById('btn-windows').setAttribute('aria-selected', os === 'windows' ? 'true' : 'false');
+    try { localStorage.setItem('tribeKitOS', os); } catch (e) {}
+  }
+
+  // Restore previous OS choice, or auto-detect on first visit
+  (function() {
+    let saved;
+    try { saved = localStorage.getItem('tribeKitOS'); } catch (e) {}
+    if (saved === 'mac' || saved === 'windows') {
+      setOS(saved);
+    } else {
+      // Auto-detect from user agent (best effort)
+      const ua = navigator.userAgent || '';
+      if (/Windows/i.test(ua)) {
+        setOS('windows');
+      } else {
+        setOS('mac'); // Default for Mac, Linux, mobile, anything else
       }
     }
   })();
